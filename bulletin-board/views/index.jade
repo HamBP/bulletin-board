@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  // logig form or profile
+
+  nav
+    div
+      label.login-label ID
+      input#id(type="text", name="id")
+    div
+      label.login-label Password
+      input#password(type="password", name="password")
+
+  main
+    

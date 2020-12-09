@@ -1,7 +1,65 @@
 doctype html
 html
   head
-    title= title
+    title= 게시판
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    
+    .container
+      header
+        h1 게시판 토이 프로젝트
+
+
+      nav
+        // profile & login form
+        form.login_form(action="", method="post")
+          div
+            label ID
+            br
+            input#id(type="text", name="id")
+          div
+            label Password
+            br
+            input#password(type="password", name="password")
+        hr
+
+        // navigaion-bar : category
+        ul
+          li
+            a(href='') 전체글보기
+          li
+            a(href='') 자유 게시판
+
+      main
+        h2 %% 게시판
+        table.articles
+          thead
+            td.article_title 제목
+            td.article_author 닉네임
+            td.article_date 날짜
+            td.article_views 조회
+          tr
+            td Lorem ipsum dolor sit amet
+            td algosketch
+            td 09.16.
+            td 12
+          tr
+            td Lorem ipsum dolor sit amet
+            td algosketch
+            td 09.16.
+            td 12
+          tr
+            td Lorem ipsum dolor sit amet
+            td algosketch
+            td 09.16.
+            td 12
+          tr
+            td Lorem ipsum dolor sit amet
+            td algosketch
+            td 09.16.
+            td 12
+          tr
+            td Lorem ipsum dolor sit amet
+            td algosketch
+            td 09.16.
+            td 12
