@@ -38,6 +38,10 @@ main {
   background-color: bisque;
 }
 
+.create {
+  text-align: right;
+}
+
 .articles {
   width: 100%;
 }
