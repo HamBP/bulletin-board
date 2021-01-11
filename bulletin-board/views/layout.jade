@@ -1,26 +1,17 @@
 doctype html
 html
   head
-    title= 게시판
+    title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     
     .container
       header
-        h1 게시판 토이 프로젝트
+        h1 <a href='/'>게시판 토이 프로젝트</a>
 
 
       nav
-        // profile & login form
-        form.login_form(action="", method="post")
-          div
-            label ID
-            br
-            input#id(type="text", name="id")
-          div
-            label Password
-            br
-            input#password(type="password", name="password")
+        block profile
         hr
 
         // navigaion-bar : category
@@ -31,12 +22,4 @@ html
             a(href='') 자유 게시판
 
       main
-        h2 %% 게시판
-        .create
-          a(href="/article/create") 글 쓰기
-        table.articles
-          thead
-            td.article_title 제목
-            td.article_author 닉네임
-            td.article_date 날짜
-            td.article_views 조회
+        block content

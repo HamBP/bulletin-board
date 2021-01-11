@@ -1,15 +1,26 @@
 extends layout
 
-block content
-  // logig form or profile
+block profile
 
-  nav
+  form.login_form(action="", method="post")
     div
-      label.login-label ID
+      label ID
+      br
       input#id(type="text", name="id")
     div
-      label.login-label Password
+      label Password
+      br
       input#password(type="password", name="password")
 
-  main
-    
+block content
+  h2 전체글보기
+  .create
+    a(href="/create") 글 쓰기
+  table.articles
+    thead
+      td.article_title 제목
+      td.article_author 닉네임
+      td.article_date 날짜
+      td.article_views 조회
+    tr
+      td= div
