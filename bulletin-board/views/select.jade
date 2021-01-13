@@ -16,3 +16,5 @@ block profile
 block content
     h2= article.title
     p= article.content
+    // a(href=`/delete/${article._id}`) 예만 안 되던데 대체 왜 ???
+    a(href="/delete/" + article._id) 삭제
