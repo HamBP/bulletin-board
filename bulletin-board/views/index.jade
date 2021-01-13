@@ -11,6 +11,8 @@ block profile
       label Password
       br
       input#password(type="password", name="password")
+    button(type="submit") sign in
+    button(type="submit") sign up
 
 block content
   h2 전체글보기
@@ -22,5 +24,11 @@ block content
       td.article_author 닉네임
       td.article_date 날짜
       td.article_views 조회
-    tr
-      td= div
+    -for(var i = 0; i < articles.length; ++i) {
+      tr
+        td= articles[i].title
+        td= articles[i].nickname
+        td= articles[i].date
+        td= articles[i].views
+    -}
+      
