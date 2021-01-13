@@ -17,6 +17,9 @@ router.get('/:id', function(req, res, next) {
         console.log(`request select _id=${id}`);
 
         res.render('select', {title: '글 읽기', article: result[0]});
+
+        var views = result[0].views + 1;
+        client.query(`update articles set views = ${views} where _id=${id}`);
     })
 });
 
