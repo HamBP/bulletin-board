@@ -20,12 +20,14 @@ block content
     a(href="/create") 글 쓰기
   table.articles
     thead
+      td.article_no No
       td.article_title 제목
       td.article_author 닉네임
       td.article_date 날짜
       td.article_views 조회
     -for(var i = 0; i < articles.length; ++i) {
       tr
+        td= articles[i]._id
         td= articles[i].title
         td= articles[i].nickname
         td= articles[i].date

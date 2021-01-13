@@ -55,8 +55,12 @@ thead {
   text-align: center;
 }
 
+.article_no {
+  width: 4%;
+}
+
 .article_title {
-  width: 60%;
+  width: 56%;
 }
 
 .article_author {

@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var fs = require('fs');
 
 var mysql = require('mysql2');
 var secret = require('../public/javascripts/secret');
@@ -12,10 +11,6 @@ var client = mysql.createConnection({
 });
 
 router.get('/', function(req, res, next) {
-    //fs.readFile('./views/writing_article.html', 'utf8', function(err, data) {
-    //    res.send(data);
-    //});
-
     res.render('create', {title: '글쓰기'});
 });
 
