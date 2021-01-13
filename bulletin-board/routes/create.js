@@ -19,7 +19,7 @@ router.post('/', function(req, res, next) {
     var body = req.body;
 
     client.query('insert into articles (title, nickname, date, content) values (?, ?, ?, ?)', 
-    [body.title, 'algosketch', '0101', body.content], function () {
+    [body.title, '익명', '0101', body.content], function () {
         res.redirect('/');
     });
 });

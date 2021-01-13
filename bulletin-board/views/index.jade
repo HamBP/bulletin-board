@@ -28,7 +28,8 @@ block content
     -for(var i = 0; i < articles.length; ++i) {
       tr
         td= articles[i]._id
-        td= articles[i].title
+        td
+          a(href=`/id/${articles[i]._id}`)= articles[i].title
         td= articles[i].nickname
         td= articles[i].date
         td= articles[i].views
