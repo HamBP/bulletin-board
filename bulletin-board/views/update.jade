@@ -14,9 +14,14 @@ block profile
     button(type="submit") sign up
 
 block content
-    h2= article.title
-    p= article.content
-    // a(href=`/delete/${article._id}`) 예만 안 되던데 대체 왜 ???
-    
-    a(href="/update/" + article._id) 수정
-    a(href="/delete/" + article._id) 삭제
+    h2 수정하기
+
+    form(action="", method="post")
+        label 제목
+        input(type="text", name="title" value=article.title)
+        hr
+        label 내용
+        br
+        textarea(name="content", cols="30", rows="10")= article.content
+        br
+        button(type="submit") 확인

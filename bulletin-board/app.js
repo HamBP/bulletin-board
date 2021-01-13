@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var createRouter = require('./routes/create');
 var selectRouter = require('./routes/select');
 var deleteRouter = require('./routes/delete');
+var updateRouter = require('./routes/update');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use('/users', usersRouter);
 app.use('/create', createRouter);
 app.use('/id', selectRouter);
 app.use('/delete', deleteRouter);
+app.use('/update', updateRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
