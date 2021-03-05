@@ -1,0 +1,22 @@
+extends layout
+
+block profile
+  form.login_form(action="", method="post")
+    div
+      label ID
+      br
+      input#id(type="text", name="id")
+    div
+      label Password
+      br
+      input#password(type="password", name="password")
+    button(type="submit") sign in
+    button(type="submit") sign up
+
+block content
+    h2= article.title
+    p= article.content
+    // a(href=`/delete/${article._id}`) 예만 안 되던데 대체 왜 ???
+    
+    a(href="/update/" + article._id) 수정
+    a(href="/delete/" + article._id) 삭제

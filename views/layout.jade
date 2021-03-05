@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    
+    .container
+      header
+        h1 <a href='/'>게시판 토이 프로젝트</a>
+
+
+      nav
+        block profile
+        hr
+
+        // navigaion-bar : category
+        ul
+          li
+            a(href='') 전체글보기
+          li
+            a(href='') 자유 게시판
+          li
+            a(href='') 토론 게시판
+
+      main
+        block content

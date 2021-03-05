@@ -1,0 +1,76 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  width: 960px;
+  margin: 0 auto;
+  grid-template-rows: 120px 600px;
+  grid-template-columns: 240px 720px;
+  grid-template-areas: 
+  "header header"
+  "nav main";
+}
+
+header {
+  grid-area: header;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  padding: 16px 0;
+  grid-area: nav;
+  background-color: aqua;
+}
+
+.login_form {
+  text-align: center;
+}
+
+main {
+  padding: 16px;
+  grid-area: main;
+  background-color: bisque;
+}
+
+.create {
+  text-align: right;
+}
+
+.articles {
+  width: 100%;
+}
+
+thead {
+  text-align: center;
+}
+
+.article_no {
+  width: 4%;
+}
+
+.article_title {
+  width: 56%;
+}
+
+.article_author {
+  width: 15%;
+}
+
+.article_date {
+  width: 6%;
+}
+
+.article_views {
+  width: 4%;
+}

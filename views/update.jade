@@ -1,0 +1,27 @@
+extends layout
+
+block profile
+  form.login_form(action="", method="post")
+    div
+      label ID
+      br
+      input#id(type="text", name="id")
+    div
+      label Password
+      br
+      input#password(type="password", name="password")
+    button(type="submit") sign in
+    button(type="submit") sign up
+
+block content
+    h2 수정하기
+
+    form(action="", method="post")
+        label 제목
+        input(type="text", name="title" value=article.title)
+        hr
+        label 내용
+        br
+        textarea(name="content", cols="30", rows="10")= article.content
+        br
+        button(type="submit") 확인
