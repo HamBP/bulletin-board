@@ -27,7 +27,8 @@ block content
       td.article_views 조회
     -for(var i = 0; i < articles.length; ++i) {
       tr
-        td= articles[i]._id
+        td
+          a(href=`/id/${articles[i]._id}`)= articles[i]._id
         td
           a(href=`/id/${articles[i]._id}`)= articles[i].title
         td= articles[i].nickname
